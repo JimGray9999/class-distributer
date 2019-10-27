@@ -63,6 +63,10 @@ function mainMenu() {
       value: 'unsolved'
     },
     {
+      name: 'Push algorithms for an entire week',
+      value: 'algorithms'
+    },
+    {
       name: 'Exit',
       value: 'exit'
     }
@@ -81,6 +85,9 @@ function mainMenu() {
         case 'solved':
         case 'unsolved':
           pickWeek(menuChoice);
+          break;
+        case 'algorithms':
+          getAlgorithms();
           break;
         case 'exit':
           exit();
@@ -211,6 +218,11 @@ function gitMenu(weekDir, activityDir) {
       pickActivity(weekDir);
     }
   });
+}
+
+function getAlgorithms() {
+  console.log("TODO: Add something here to copy over algorithms...");
+  mainMenu();
 }
 
 function addCommitPush(weekDir, activityDir) {
